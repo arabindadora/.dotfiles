@@ -1,11 +1,13 @@
 local lualine = require('lualine')
 local colorscheme = vim.cmd.colorscheme
 
-colorscheme('moonfly')
+local theme = 'gruvbox'
+
+colorscheme(theme)
 
 lualine.setup {
   options = {
-    theme = 'moonfly',
+    theme = theme,
     globalstatus = true,
   },
   sections = {
@@ -20,3 +22,4 @@ lualine.setup {
     },
   },
 }
+

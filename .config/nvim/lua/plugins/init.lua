@@ -28,7 +28,7 @@ packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- theme
-  use 'bluz71/vim-moonfly-colors'
+  use 'gruvbox-community/gruvbox'
   use 'nvim-lualine/lualine.nvim'
 
   -- performance

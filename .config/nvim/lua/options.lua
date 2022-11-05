@@ -28,3 +28,4 @@ opt.tabstop = 4 -- Number of spaces tabs count for
 opt.termguicolors = true -- True color support
 opt.wildmode = { 'list', 'longest' } -- Command-line completion mode
 opt.wrap = false -- Disable line wrap
+g.gruvbox_contrast_dark = 1
