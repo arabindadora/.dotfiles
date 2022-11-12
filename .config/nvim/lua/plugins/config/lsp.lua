@@ -1,3 +1,5 @@
+local mason = require('mason')
+local mason_lspconfig = require('mason-lspconfig')
 local lspconfig = require('lspconfig')
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
@@ -44,6 +46,10 @@ end
 -- map buffer local keybindings when the language server attaches
 local servers = { 'bashls', 'dockerls', 'gopls', 'pyright', 'sumneko_lua', 'terraformls' }
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+-- order is important
+mason.setup()
+mason_lspconfig.setup({ automatic_installation = true }) -- autoinstall servers configured by lspconfig
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
