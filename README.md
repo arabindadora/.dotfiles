@@ -49,3 +49,7 @@ dotfiles checkout
 
 > NOTE: step #3 could error out if the config files are alredy present in $HOME.
 > this can be solved by either deleting or renaming the existing files.
+
+## iterm2 settings
+see [documentation](https://gitlab.com/gnachman/iterm2/-/wikis/Move-Settings-Between-Machines#back-up-user-defaults)
+
