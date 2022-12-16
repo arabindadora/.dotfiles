@@ -28,7 +28,7 @@ packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- theme
-  use 'gruvbox-community/gruvbox'
+  use 'ellisonleao/gruvbox.nvim'
   use 'nvim-lualine/lualine.nvim'
 
   -- performance
