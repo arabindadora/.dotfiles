@@ -34,26 +34,18 @@ packer.startup(function(use)
   -- performance
   use 'nathom/filetype.nvim'
   use 'lewis6991/impatient.nvim'
-  use 'tweekmonster/startuptime.vim'
 
-  use 'nvim-lua/plenary.nvim'
-  use 'nvim-telescope/telescope.nvim'
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {
+      { 'nvim-lua/plenary.nvim' },
+    }
+  }
+
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
   }
-
-  -- completion
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/nvim-cmp'
-
-  -- lsp
-  use 'williamboman/mason-lspconfig.nvim'
-  use 'williamboman/mason.nvim'
-  use 'neovim/nvim-lspconfig'
 
   -- go
   use 'mfussenegger/nvim-dap'
@@ -62,11 +54,31 @@ packer.startup(function(use)
   use 'ray-x/guihua.lua'
   use 'ray-x/go.nvim'
 
-  -- snippets
-  use 'L3MON4D3/LuaSnip'
-  use 'saadparwaiz1/cmp_luasnip'
+  use {
+    'VonHeikemen/lsp-zero.nvim',
+    requires = {
+      -- lsp
+      { 'neovim/nvim-lspconfig' },
+      { 'williamboman/mason.nvim' },
+      { 'williamboman/mason-lspconfig.nvim' },
+
+      -- autocompletion
+      { 'hrsh7th/nvim-cmp' },
+      { 'hrsh7th/cmp-buffer' },
+      { 'hrsh7th/cmp-path' },
+      { 'saadparwaiz1/cmp_luasnip' },
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'hrsh7th/cmp-nvim-lua' },
+      { 'hrsh7th/cmp-cmdline' },
+
+      -- snippets
+      { 'L3MON4D3/LuaSnip' },
+      { 'rafamadriz/friendly-snippets' },
+    }
+  }
 
   -- features
+  use 'nvim-tree/nvim-tree.lua'
   use 'lewis6991/gitsigns.nvim'
   use 'voldikss/vim-floaterm'
   use 'NTBBloodbath/rest.nvim'
