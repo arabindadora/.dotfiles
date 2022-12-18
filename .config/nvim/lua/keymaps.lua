@@ -8,15 +8,9 @@ map('', '<Space>', '<Nop>', opts)
 g.mapleader = ' '
 g.maplocalleader = ' '
 
--- source this file
-map("n", "<leader>ss", "<cmd>so %<CR>", opts)
-map("n", "<leader>rg", "<cmd>!go run %<CR>", opts)
-
--- <Tab> to navigate the completion menu
-map('i', '<S-Tab>', 'pumvisible() ? "\\<C-p>" : "\\<Tab>"', { expr = true })
-map('i', '<Tab>', 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', { expr = true })
-
-map('n', '<C-l>', '<cmd>noh<CR>') -- Clear highlights
+map("n", "<leader>ss", "<cmd>so %<CR>", opts) -- source this file
+map("n", "<leader>rg", "<cmd>!go run %<CR>", opts) -- go run this file
+map('n', '<C-l>', '<cmd>noh<CR>') -- clear highlights
 
 map('n', ';', ':')
 map('v', ';', ':')
@@ -31,6 +25,7 @@ map('n', '-', '<C-x>')
 
 map('', '<C-a>', '<Esc>ggVG<CR>', opts) -- select all
 map('', '<C-c>', '"+y') -- copy to clipboard
+map('', '<C-p>', '<cmd>:NvimTreeToggle<cr>')
 
 -- manual indentation - stay in visual mode
 map("v", "<", "<gv", opts)
@@ -45,8 +40,8 @@ map("n", "]b", "<cmd>:bnext<CR>", opts)
 map("n", "[b", "<cmd>:bprevious<CR>", opts)
 
 -- move line up/down
-map("n", "<S-u>", "<Esc>:m .-2<CR>", opts)
-map("n", "<S-d>", "<Esc>:m .+1<CR>", opts)
+map("v", "J", ":m '>+1<CR>gv=gv")
+map("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Don't copy when pasting over selection
 map("v", "p", '"_dP')
@@ -61,4 +56,3 @@ map("i", "<C-h>", "<Left>") -- "  move left"
 map("i", "<C-l>", "<Right>") -- " move right"
 map("i", "<C-j>", "<Down>") -- " move down"
 map("i", "<C-k>", "<Up>") -- " move up"
-
