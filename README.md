@@ -1,7 +1,7 @@
 # .dotfiles
-my dotfiles powered by **git bare repo**
+my dotfiles powered by **git work tree**
 
-## a quick git bare repo tutorial
+## a quick git work tree tutorial
 ### on the main system
 1. create the dotfiles repo
 ```sh
@@ -52,4 +52,3 @@ dotfiles checkout
 
 ## iterm2 settings
 see [documentation](https://gitlab.com/gnachman/iterm2/-/wikis/Move-Settings-Between-Machines#back-up-user-defaults)
-
