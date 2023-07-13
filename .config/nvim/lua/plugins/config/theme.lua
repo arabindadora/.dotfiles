@@ -10,7 +10,6 @@ local colors = {
 
 gruvbox.setup {
   contrast = 'hard',
-  italic = false,
   palette_overrides = {
     dark0_hard = colors.purplish, -- background
     dark1 = colors.lightgray, -- cursorline

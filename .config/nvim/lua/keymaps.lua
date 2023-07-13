@@ -25,7 +25,8 @@ map('n', '-', '<C-x>')
 
 map('', '<C-a>', '<Esc>ggVG<CR>', opts) -- select all
 map('', '<C-c>', '"+y') -- copy to clipboard
-map('', '<C-p>', '<cmd>:NvimTreeToggle<cr>')
+map('n', '<C-p>', '<cmd>:NvimTreeToggle<cr>')
+map('n', '<C-f>', '<cmd>:NvimTreeFocus<cr>')
 
 -- manual indentation - stay in visual mode
 map("v", "<", "<gv", opts)

@@ -1,7 +1,6 @@
 local g = vim.g -- a table to access global variables
 local opt = vim.opt -- to set options
 
-g.did_load_filetypes = 1 -- do not source the default filetype.vim
 g.loaded_netrw = 1 -- disable netrw
 g.loaded_netrwPlugin = 1
 opt.background = 'dark'

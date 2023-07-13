@@ -21,7 +21,6 @@ require("lazy").setup({
   'nvim-lualine/lualine.nvim',
 
   -- performance
-  'nathom/filetype.nvim',
   'lewis6991/impatient.nvim',
 
   {
@@ -77,5 +76,4 @@ require("lazy").setup({
   'NTBBloodbath/rest.nvim',
   'terrortylor/nvim-comment',
   'kyazdani42/nvim-web-devicons',
-  'gpanders/editorconfig.nvim'
 })

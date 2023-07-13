@@ -42,12 +42,17 @@ git clone --bare https://github.com/arabindadora/.dotfiles.git $HOME/.dotfiles
 echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.zshrc
 ```
 
-3. checkout the files
+3. make dotfiles command ignore untracked files
+```sh
+dotfiles config --local status.showUntrackedFiles no
+```
+
+4. checkout the files
 ```sh
 dotfiles checkout
 ```
 
-> NOTE: step #3 could error out if the config files are alredy present in $HOME.
+> NOTE: step #4 could error out if the config files are alredy present in $HOME.
 > this can be solved by either deleting or renaming the existing files.
 
 ## iterm2 settings
